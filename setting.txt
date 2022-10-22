@@ -1,0 +1,77 @@
+
+//初期化packageg.jsonを作成してくれる
+$npm init -y
+
+//依存関係のインストール(socketは、サーバーとの通信を簡単にするライブラリー)
+npm i express ejs socket.io
+
+//新しい依存関係のuuidをインストール(roomに動的にidを作成する)
+npm i uuid
+
+//最後の依存関係(アプリを高速でリフレッシュしてくれる)
+npm i --save-dev nodemon
+
+//server.jsonを作成する
+
+//package.jsonのscriptを下記に変更
+"devStart": "nodemon server.js"
+
+//serverファイルをrunしてくれる。(package.jsonのscriptで設定しているから)
+//変更した際にすぐにその変更を反映して、restartしてくれる
+npm run devStart
+
+//--PEER---
+//ライブラリーダウンロード to simplifies WebRTC peer-to-peer data, video, and audio calls.
+npm i -g peer
+
+//port3001でpeerが動く(別コンソールでやる)
+peerjs --port 3001
+(if it doesn't work, you didn't install corectlly, so install again with following command)
+
+npm uninstall -g peer
+npm install -g peer
+
+server起動
+nodemon server.js
+
+/HTMLにタグ追加
+<script src="https://unpkg.com/peerjs@1.4.7/dist/peerjs.min.js"></script>
+
+
+
+
+///design
+
+//color
+チョコミントみたい
+#4e2431
+#a8c3c9
+
+黄色と緑
+#f9d61a
+#125f5e
+
+ネオンみたいな青と紫
+#9435a4
+#33f3e2
+
+紫と黒
+#af50cc
+#140617
+
+青とオレンジとピンクの中間
+#fea6a5
+#3337b1
+
+黒と緑
+#68c60e
+#3c4547
+
+
+
+http://localhost:3001/peerjs/id?ts=16659322905270.5663681649843946&version=1.4.7
+https://192.168.10.106/peerjs/id?ts=16659340026670.8511109261705341&version=1.4.7
+
+reffer
+http://localhost:3000/
+https://localhost:3000/
